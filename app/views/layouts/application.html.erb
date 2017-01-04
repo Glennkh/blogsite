@@ -23,13 +23,13 @@
   
   <ul>
 			<li class="category">Social</li>
-			<li><a href="https://twitter.com/mackenziechild">Twitter</a></li>
-			<li><a href="http://instagram.com/mackenziechild">Instagram</a></li>
-			<li><a href="https://github.com/mackenziechild">Github</a></li>
-			<li><a href="mailto:hey@mackenziechild.me">Email</a></li>
+			<li><a href="https://twitter.com">Twitter</a></li>
+			<li><a href="http://instagram.com">Instagram</a></li>
+			<li><a href="https://github.com/Glennkh">Github</a></li>
+			<li><a href="mailto:heweyglenn@gmail.com">Email</a></li>
 		</ul>
 		<% if !user_signed_in? %>
-		  <p class="sign_in">Admin Login</p>
+		  <p class="sign_in"><%= link_to('Admin Login', new_user_session_path)  %></p>
 		<% end %>
   
 </div>
@@ -48,7 +48,8 @@
         <button class="button">
           <%= link_to "New Post", new_post_path %>
         </button>
-        <button class="button">Log Out</button>
+        
+        <button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
       </div>
     <% end %>
   </div>
